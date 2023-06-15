@@ -1,0 +1,165 @@
+<html>
+<head>
+   <title>AutoFinder</title>
+<style>
+.center {
+ display:block;
+ margin-left: auto;
+ margin-right: auto;
+ width:
+}
+</style>
+</head>
+<body bgcolor="#F3A6A6">
+<body>
+<h1><font face="verdana"><font color="#597DED"><center><marquee scrolldelay=85>Encuentra el auto perfecto para ti</marquee></center></font></h1>
+<hr>
+<p>
+<img src="https://usagif.com/wp-content/uploads/gifs/race-car-77.gif" widht="160" height="160" align="right">
+</p>
+<h3>El propósito de nuestra empresa</h3>
+<p>Nuestro propósito es ofrecer una experiencia extraordinaria a nuestros clientes al proporcionarles acceso a los automóviles de lujo más exclusivos y deseados del mercado. Nos esforzamos por superar las expectativas de nuestros clientes en términos de calidad, servicio y satisfacción.</p>
+<h3> El objetivo de nuestra empresa</h3>
+<p>Nuestro objetivo es convertirnos en el destino preferido para aquellos que buscan vehículos de alta gama, ofreciendo una selección incomparable, asesoramiento experto y un nivel excepcional de atención al cliente. Nos dedicamos a crear relaciones duraderas con nuestros clientes, basadas en la confianza, la transparencia y la pasión por los automóviles de lujo. Aspiramos a ser reconocidos coo líderes en el sector, destacando por nuestra reputación impecable, conocimientos espezializados y compromiso inquebrantable con la excelencia en cada interacción. En úñtima instancia, nuestro propósito es hacer realidad los euños automovilísticos de nuestro clientes, proporcionándoles un acceso exclusivo al lujo sobre ruedas y creando experiencias memorables que perduren en el tiempo. </p>
+
+<h3><center>Imagen de la empresa</center></h3>
+<img src="C:\Users\Dell\Desktop\empresaautos.jpg" class="center">
+<p>
+  <center><table border="1" width="70%" height="35%">
+    <caption>Ventas de Autos</caption>
+    <thead bgcolor="#C8FFA6">
+      <tr>
+        <th>Ventas</th>
+        <th>Costos</th>
+        <th>Modelo de Auto</th>
+        <th>Marca</th>
+        <th>Fabricante</th>
+      </tr>
+    </thead>
+    <tbody align="center" bgcolor="#F0FF8F">
+      <tr>
+        <td>100</td>
+        <td>$20,000</td>
+        <td>Camry</td>
+        <td>Toyota</td>
+        <td>Toyota Motor Corporation</td>
+      </tr>
+      <tr>
+        <td>75</td>
+        <td>$18,500</td>
+        <td>Civic</td>
+        <td>Honda</td>
+        <td>Honda Motor Co., Ltd.</td>
+      </tr>
+      <tr>
+        <td>120</td>
+        <td>$25,000</td>
+        <td>Accord</td>
+        <td>Honda</td>
+        <td>Honda Motor Co., Ltd.</td>
+      </tr>
+      <tr>
+        <td>90</td>
+        <td>$22,000</td>
+        <td>Corolla</td>
+        <td>Toyota</td>
+        <td>Toyota Motor Corporation</td>
+      </tr>
+    </tbody>
+  </table></center>
+</p>
+    <center><h1>Visita los siguientes links para más información</h1>
+    
+    <h2>Enlaces de nuestros proveedores:</h2>
+    <ul>
+        <a href="https://www.honda.mx/" target="_blank">Honda</a><br>
+        <a href="https://www.ferrari.com/es-ES" target="_blank">Ferrari</a><br>
+        <a href="https://www.toyota.mx/?gclid=EAIaIQobChMIvOTD55iT_wIVwhatBh1IlgdMEAAYAiAAEgI-TfD_BwE" target="_blank">Toyota</a><br>
+    </center></ul>
+    <center><h2>Video de uno de nuestros autos más vendidos</h2>
+    <h3>Lamborgini Aventador</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/C74Hq3HVD0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+    
+    <h2>Agregar Comentarios</h2>
+
+        
+<form action="mailto:correo@ejemplo.com" method="post" enctype="text/plain">
+  <textarea name="comentario" rows="4" cols="50"></textarea><br>
+  <input type="submit" value="Enviar Comentario">
+
+
+    </form>
+  <script>
+    function mostrarFechaHora() {
+      var fechaHora = new Date();
+      var fecha = fechaHora.toLocaleDateString();
+      var hora = fechaHora.toLocaleTimeString();
+
+      document.getElementById('fecha').innerHTML = fecha;
+      document.getElementById('hora').innerHTML = hora;
+    }
+
+    setInterval(mostrarFechaHora, 1000); // Actualizar cada segundo
+  </script>
+</head>
+<body>
+  <h1>Fecha y Hora en Tiempo Real</h1>
+  <p>Fecha: <span id="fecha"></span></p>
+  <p>Hora: <span id="hora"></span></p>
+</body>
+
+  <script>
+    // Función para incrementar el contador de visitas
+    function incrementarContador() {
+      if (localStorage.getItem('contador')) {
+        var contador = parseInt(localStorage.getItem('contador'));
+        contador++;
+        localStorage.setItem('contador', contador);
+      } else {
+        localStorage.setItem('contador', 1);
+      }
+    }
+
+    // Función para mostrar el contador en la página
+    function mostrarContador() {
+      var contador = localStorage.getItem('contador');
+      document.getElementById('contador').innerHTML = contador;
+    }
+
+    // Llamar a las funciones al cargar la página
+    window.onload = function() {
+      incrementarContador();
+      mostrarContador();
+    };
+  </script>
+</head>
+<body>
+  <h1>Contador de Visitas</h1>
+  <p>Número de visitas: <span id="contador"></span></p>
+</body>
+
+  <h1>Formulario de Contacto</h1>
+  <form action="procesar_formulario.php" method="POST">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="Domicilio">Domicilio:</label>
+    <textarea id="Domicilio" name="Domicilio" required></textarea>
+    
+    <label for="Edad">Edad:</label>
+    <input type="text" id="Edad" name="Edad" required>
+
+    <input type="submit" value="Enviar">
+  </form>
+
+<h3>Integrantes de la empresa</h3>
+<p><ul>
+<li>Daniel Levoreiro Cruz.</li>
+<li>Alan Jaret Luis Pablo.</li>
+<li>Dalia Gomes Laureano.</li>
+</p></ul>
+</body>
+</html>
